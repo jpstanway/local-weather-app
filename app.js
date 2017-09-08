@@ -1,12 +1,18 @@
+
+
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    $("#data").html("latitude: " + position.coords.latitude
-    + "<br>longitude: " + position.coords.longitude);
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    locOK(latitude, longitude);
   });
 }
 
-$.getJSON("https://fcc-weather-api.glitch.me/", function(data) {
+function locOK(latitude, longitude) {
+  $.getJSON("https://fcc-weather-api.glitch.me/api/current?lon=" + longitude +
+            "&lat=" + latitude, function(data) {
 
-  
-
-});
+    console.log(data);
+  });
+}
