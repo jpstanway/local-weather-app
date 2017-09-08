@@ -14,5 +14,10 @@ function locOK(latitude, longitude) {
             "&lat=" + latitude, function(data) {
 
     console.log(data);
+
+    $('#location').html(data.name + ", " + data.sys.country);
+    $('.temp-display').append('<p>' + Math.floor(data.main.temp) + ' ° </p>'
+                              + '<img src=' + data.weather[0].icon + '>'
+                              + '<p><em>' + data.weather[0].main + '</em></p>');
   });
 }
