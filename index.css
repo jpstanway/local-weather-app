@@ -1,0 +1,18 @@
+.temp-display p {
+  font-size: 35px;
+}
+
+.hi-lo p {
+  display: inline;
+}
+
+.conditions p, img {
+  display: inline;
+}
+
+#main-temp {
+  text-align: center;
+  border: none;
+  background: none;
+  outline: none;
+}
