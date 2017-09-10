@@ -1,3 +1,14 @@
+@media (max-width: 1250px) {
+	body {
+		background-size: auto !important;
+	}
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .temp-display p {
   font-size: 35px;
 }

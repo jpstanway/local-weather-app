@@ -37,6 +37,16 @@ function locOK(latitude, longitude) {
       scale = "C";
     }
 
+    if (condition === "Mist") {
+      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076581/misty_ps4smt.jpg)');
+    } else if (condition === "Clear") {
+      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076560/sunny_crpozt.jpg)');
+    } else if (condition === "Rain") {
+      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_1851/v1505076604/rain_e8jt8a.jpg)');
+    } else if (condition === "Clouds") {
+      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076550/cloudy_inkw1f.jpg)');
+    }
+
     $('#location').html(city + ", " + country);
     $('.conditions').html('<img src=' + icon + '>'
                             + '<p><em>' + condition + '</em></p>');
@@ -53,6 +63,7 @@ function setStats(temp, hi_temp, lo_temp, scale) {
                       + '<p><strong>Lo:</strong> ' + lo_temp + ' °' + scale + '</p>');
 
 }
+
 
 $('#main-temp').on('click', function() {
 
