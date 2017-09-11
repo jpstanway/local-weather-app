@@ -33,8 +33,10 @@ function locOK(latitude, longitude) {
 
     if (country === "US") {
       scale = "F";
+      $('.info').html('<p><em>click temp for Celsius</em></p>');
     } else {
       scale = "C";
+      $('.info').html('<p><em>click temp for Fahrenheit</em></p>');
     }
 
     if (condition === "Mist") {
@@ -72,11 +74,13 @@ $('#main-temp').on('click', function() {
     hi_temp = Math.round(hi_temp * 1.8 + 32);
     lo_temp = Math.round(lo_temp * 1.8 + 32);
     scale = "F";
+    $('.info').html('<p><em>click temp for Celsius</em></p>');
   } else if (scale === "F") {
     temp = Math.round((temp - 32) / 1.8);
     hi_temp = Math.round((hi_temp - 32) / 1.8);
     lo_temp = Math.round((lo_temp - 32) / 1.8);
     scale = "C";
+    $('.info').html('<p><em>click temp for Fahrenheit</em></p>');
   }
 
   setStats(temp, hi_temp, lo_temp, scale);

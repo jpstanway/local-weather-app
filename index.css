@@ -9,16 +9,43 @@ body {
   background-size: cover;
 }
 
+h1 {
+	font-size: 28px;
+	font-family: "Ubuntu", sans-serif;
+	color: #f6f6f6;
+}
+
+footer {
+	font-size: 10px;
+	color: #f6f6f6;
+}
+
+.container-fluid {
+	padding: 20px;
+}
+
 .temp-display p {
-  font-size: 35px;
+  font-size: 65px;
+}
+
+.info {
+	font-size: 12px;
 }
 
 .hi-lo p {
   display: inline;
+	font-size: 30px;
+	margin-right: 10px;
+	color: 	#303030;
 }
 
 .conditions p, img {
   display: inline;
+}
+
+#location {
+	font-size: 40px;
+	color: #e6e6e6;
 }
 
 #main-temp {
