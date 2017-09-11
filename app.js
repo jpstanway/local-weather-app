@@ -1,3 +1,6 @@
+var latitude;
+var longitude;
+
 var city = "";
 var country = "";
 var temp = 0;
@@ -10,8 +13,8 @@ var icon = "";
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
 
     locOK(latitude, longitude);
   });
@@ -20,8 +23,6 @@ if (navigator.geolocation) {
 function locOK(latitude, longitude) {
   $.getJSON("https://fcc-weather-api.glitch.me/api/current?lon=" + longitude +
             "&lat=" + latitude, function(data) {
-
-    console.log(data);
 
     city = data.name;
     country = data.sys.country;
@@ -65,7 +66,6 @@ function setStats(temp, hi_temp, lo_temp, scale) {
                       + '<p><strong>Lo:</strong> ' + lo_temp + ' °' + scale + '</p>').fadeIn(800);
 
 }
-
 
 $('#main-temp').on('click', function() {
 
