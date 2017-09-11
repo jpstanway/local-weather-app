@@ -1,27 +1,31 @@
-@media (max-width: 1250px) {
-	body {
-		background-size: auto !important;
-	}
+
+/*****************
+**** DOCUMENT ****
+*****************/
+html {
+	background: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 body {
-  background-repeat: no-repeat;
-  background-size: cover;
+	background: transparent;
 }
+
+.container-fluid {
+	padding: 20px;
+}
+
+/*****************
+**** TEXT ****
+*****************/
 
 h1 {
 	font-size: 28px;
 	font-family: "Ubuntu", sans-serif;
 	color: #f6f6f6;
-}
-
-footer {
-	font-size: 10px;
-	color: #f6f6f6;
-}
-
-.container-fluid {
-	padding: 20px;
 }
 
 .temp-display p {
@@ -53,4 +57,13 @@ footer {
   border: none;
   background: none;
   outline: none;
+}
+
+/*****************
+**** FOOTER ****
+*****************/
+
+footer {
+	font-size: 10px;
+	color: #f6f6f6;
 }

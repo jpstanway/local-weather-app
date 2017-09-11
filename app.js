@@ -40,13 +40,13 @@ function locOK(latitude, longitude) {
     }
 
     if (condition === "Mist") {
-      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076581/misty_ps4smt.jpg)');
+      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2271/v1505159345/misty_z6wr3w.jpg)');
     } else if (condition === "Clear") {
-      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076560/sunny_crpozt.jpg)');
+      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505159098/sunny_2_dbcx43.jpg)');
     } else if (condition === "Rain") {
-      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_1851/v1505076604/rain_e8jt8a.jpg)');
+      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2238/v1505076604/rain_e8jt8a.jpg)');
     } else if (condition === "Clouds") {
-      $('body').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505076550/cloudy_inkw1f.jpg)');
+      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505158921/cloudy_2_y5pglh.jpg)');
     }
 
     $('#location').html(city + ", " + country);
@@ -60,9 +60,9 @@ function locOK(latitude, longitude) {
 
 function setStats(temp, hi_temp, lo_temp, scale) {
 
-  $('.display').html(temp + ' °' + scale);
-  $('.hi-lo').html('<p><strong>Hi:</strong> ' + hi_temp + ' °' + scale + '</p>'
-                      + '<p><strong>Lo:</strong> ' + lo_temp + ' °' + scale + '</p>');
+  $('.display').hide().html(temp + ' °' + scale).fadeIn(800);
+  $('.hi-lo').hide().html('<p><strong>Hi:</strong> ' + hi_temp + ' °' + scale + '</p>'
+                      + '<p><strong>Lo:</strong> ' + lo_temp + ' °' + scale + '</p>').fadeIn(800);
 
 }
 
