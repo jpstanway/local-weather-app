@@ -48,6 +48,8 @@ function locOK(latitude, longitude) {
       $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2238/v1505076604/rain_e8jt8a.jpg)');
     } else if (condition === "Clouds") {
       $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505158921/cloudy_2_y5pglh.jpg)');
+    } else if (condition === "Fog") {
+      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2238/v1506535826/fog_mcnyag.jpg)')
     }
 
     $('#location').html(city + ", " + country);
