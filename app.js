@@ -10,7 +10,7 @@ var scale = "";
 var condition = "";
 var icon = "";
 
-
+// determine location of user
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
     latitude = position.coords.latitude;
@@ -39,7 +39,7 @@ function locOK(latitude, longitude) {
       scale = "C";
       $('.info').html('<p><em>click temp for Fahrenheit</em></p>');
     }
-
+    // set background depending on weather conditions
     if (condition === "Mist") {
       $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2271/v1505159345/misty_z6wr3w.jpg)');
     } else if (condition === "Clear") {
@@ -69,6 +69,7 @@ function setStats(temp, hi_temp, lo_temp, scale) {
 
 }
 
+// convert celsius to fahrenheit and vice versa
 $('#main-temp').on('click', function() {
 
   if (scale === "C") {
