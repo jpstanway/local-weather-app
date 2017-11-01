@@ -23,7 +23,7 @@ if (navigator.geolocation) {
 function locOK(latitude, longitude) {
   $.getJSON("https://fcc-weather-api.glitch.me/api/current?lon=" + longitude +
             "&lat=" + latitude, function(data) {
-
+    
     city = data.name;
     country = data.sys.country;
     temp = Math.round(data.main.temp);
@@ -88,3 +88,10 @@ $('#main-temp').on('click', function() {
 
   setStats(temp, hi_temp, lo_temp, scale);
 });
+
+// COPYRIGHT
+var footer = document.getElementById('footer');
+var date = new Date();
+var year = date.getFullYear();
+
+footer.innerHTML = '<p>&copy;' + year + ' Jordan Stanway. All rights reserved.</p>';
