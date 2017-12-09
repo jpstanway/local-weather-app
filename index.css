@@ -1,8 +1,28 @@
 
+@media (max-width: 450px) {
+	body {
+		padding: 0 !important;
+	}
+
+	footer {
+		color: #f6f6f6 !important;
+	}
+}
+
 /*****************
 **** DOCUMENT ****
 *****************/
-html {
+
+html, body, .container-fluid, .row, #main {
+		height: 100% !important;
+}
+
+body {
+	padding-top: 50px;
+	background-color: #efefef;
+}
+
+.container-fluid {
 	background: no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -10,12 +30,10 @@ html {
 	background-size: cover;
 }
 
-body {
-	background: transparent;
-}
-
-.container-fluid {
+#main {
 	padding: 50px 20px 20px 20px;
+	max-width: 1200px;
+	max-height: 760px;
 }
 
 /*****************
@@ -25,7 +43,6 @@ body {
 h1 {
 	font-size: 2em;
 	font-family: "Ubuntu", sans-serif;
-	color: #f6f6f6;
 }
 
 .temp-display p {
@@ -37,19 +54,63 @@ h1 {
 }
 
 .hi-lo p {
-  display: inline;
+  	display: inline;
 	font-size: 30px;
 	margin-right: 10px;
-	color: 	#303030;
 }
 
 .conditions p, img {
   display: inline;
 }
 
+.mist {
+	color: #c1c1c1;
+	background-image: url('http://res.cloudinary.com/mtninja/image/upload/v1512711154/mist_d7ajgf.jpg');*/
+}
+
+.mist-2 {
+	color: #e0e0e0;
+}
+
+.sunny {
+	color: #e6e6fa;
+	background-image: url('http://res.cloudinary.com/mtninja/image/upload/v1512711151/sunny_fqtyfl.jpg');
+}
+
+.sunny-2 {
+	color: #f3f3fd;
+}
+
+.rain {
+	color: #40e0d0;
+	background-image: url('http://res.cloudinary.com/mtninja/image/upload/v1512711152/rainy_poiobq.jpg');
+}
+
+.rain-2 {
+	color: #add8e6;
+}
+
+.cloudy {
+	color: #c3e7f5;
+	background-image: url('http://res.cloudinary.com/mtninja/image/upload/v1512711156/clouds_djff01.jpg');
+}
+
+.cloudy-2 {
+	color: #e1f3fa;
+}
+
+.fog {
+	color: #e0e0e0;
+	background-image: url('http://res.cloudinary.com/mtninja/image/upload/v1512711152/foggy_tp2oaw.jpg');
+}
+
+.fog-2 {
+	color: #f7f7f7;
+}
+
 #location {
 	font-size: 40px;
-	color: #e6e6e6;
+	color: #f6f6f6;
 }
 
 #main-temp {
@@ -57,6 +118,7 @@ h1 {
   border: none;
   background: none;
   outline: none;
+  color: #f6f6f6;
 }
 
 /*****************
@@ -65,5 +127,8 @@ h1 {
 
 footer {
 	font-size: 10px;
-	color: #f6f6f6;
+	color: #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }

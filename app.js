@@ -41,15 +41,20 @@ function locOK(latitude, longitude) {
     }
     // set background depending on weather conditions
     if (condition === "Mist") {
-      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2271/v1505159345/misty_z6wr3w.jpg)');
+      $('#main').addClass('mist');
+      $('.hi-lo, p.display').addClass('mist-2');
     } else if (condition === "Clear") {
-      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505159098/sunny_2_dbcx43.jpg)');
+      $('#main').addClass('sunny');
+      $('.hi-lo, p.display').addClass('mist-2');
     } else if (condition === "Rain") {
-      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2238/v1505076604/rain_e8jt8a.jpg)');
+      $('#main').addClass('rain');
+      $('.hi-lo, p.display').addClass('rain-2');
     } else if (condition === "Clouds") {
-      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/v1505158921/cloudy_2_y5pglh.jpg)');
+      $('#main').addClass('cloudy');
+      $('.hi-lo, p.display').addClass('cloudy-2');
     } else if (condition === "Fog") {
-      $('html').css('background-image', 'url(http://res.cloudinary.com/mtninja/image/upload/c_scale,w_2238/v1506535826/fog_mcnyag.jpg)')
+      $('#main').addClass('fog');
+      $('.hi-lo, p.display').addClass('fog-2');
     }
 
     $('#location').html(city + ", " + country);
